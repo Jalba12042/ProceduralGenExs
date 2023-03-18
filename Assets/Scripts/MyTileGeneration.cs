@@ -48,7 +48,8 @@ public class MyTileGeneration : MonoBehaviour
         float offsetX = -this.gameObject.transform.position.x;
         float offsetZ = -this.gameObject.transform.position.z;
 
-        // calculate the offsets based on the tile position
+        // calculate the heightMap using the Perlin noise generator
+        // use the offsets to make sure the seams between tiles have the same height - adjacent tiles will share the map
         float[,] heightMap = this.noiseMapGeneration.GenerateNoiseMap(tileDepth, tileWidth, this.mapScale, offsetX, offsetZ, waves);
 
         // generate a heightMap using noise

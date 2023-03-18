@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,9 +55,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,6 +85,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &2140855451552885647
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -91,9 +96,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &2140855451552885651
 MonoBehaviour:
@@ -134,7 +139,7 @@ MonoBehaviour:
   - name: mountain
     height: 1
     color: {r: 0.38679248, g: 0.26637596, b: 0.26637596, a: 0}
-  heightMultiplier: 5
+  heightMultiplier: 30
   heightCurve:
     serializedVersion: 2
     m_Curve:
@@ -148,14 +153,14 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.4051895
-      value: 0.0076904297
-      inSlope: 0
-      outSlope: 0
+      time: 0.38158163
+      value: 0.03255761
+      inSlope: 0.19054344
+      outSlope: 0.19054344
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.13086562
     - serializedVersion: 3
       time: 1
       value: 1
@@ -172,9 +177,9 @@ MonoBehaviour:
   - seed: 5613
     frequency: 1
     amplitude: 1
-  - seed: 9551
+  - seed: 5613
     frequency: 0.5
     amplitude: 2
-  - seed: 6712
+  - seed: 5613
     frequency: 0.25
     amplitude: 4
