@@ -5,7 +5,7 @@ using System.Collections;
 // Try varying the xOrg, yOrg and scale values in the inspector
 // while in Play mode to see the effect they have on the noise.
 
-public class ExampleNoise: MonoBehaviour
+public class SimpleNoise : MonoBehaviour
 {
     // Width and height of the texture in pixels.
     public int pixWidth;
@@ -46,7 +46,6 @@ public class ExampleNoise: MonoBehaviour
                 float xCoord = xOrg + x / noiseTex.width * scale;
                 float yCoord = yOrg + y / noiseTex.height * scale;
                 float sample = Mathf.PerlinNoise(xCoord, yCoord);
-                //float sample = Random.Range(0f, 1f);
                 pix[(int)y * noiseTex.width + (int)x] = new Color(sample, sample, sample);
                 x++;
             }

@@ -139,7 +139,7 @@ MonoBehaviour:
   - name: mountain
     height: 1
     color: {r: 0.38679248, g: 0.26637596, b: 0.26637596, a: 0}
-  heightMultiplier: 30
+  heightMultiplier: 5
   heightCurve:
     serializedVersion: 2
     m_Curve:
