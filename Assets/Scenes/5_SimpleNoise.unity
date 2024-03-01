@@ -234,11 +234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31270a8b190a97c4385ca96b62ecd61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pixWidth: 10
-  pixHeight: 15
+  pixWidth: 100
+  pixHeight: 100
   xOrg: 4
   yOrg: 6
-  scale: 2
+  scale: 30
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 6.35e-43, y: 1e-45, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

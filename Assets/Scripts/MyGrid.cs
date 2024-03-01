@@ -33,11 +33,12 @@ public class MyGrid : MonoBehaviour {
 
         pinLocation = new Vector3(0.5f * xSize, -rPipe, 0.8f * zSize);
         GameObject go = Instantiate(pinPrefab);
-        Pin b = go.GetComponent<Pin>();
-        b.transform.position = pinLocation;
-        //tip pin to be at the same angle as the deformed grid
-        b.transform.RotateAround(Vector3.zero, Vector3.right, gradeAngle);
-
+        //Pin b = go.GetComponent<Pin>();
+        //b.transform.position = pinLocation;
+        ////tip pin to be at the same angle as the deformed grid
+        //b.transform.RotateAround(Vector3.zero, Vector3.right, gradeAngle);
+        go.transform.position = pinLocation;
+        go.transform.RotateAround(Vector3.zero, Vector3.right, gradeAngle);
     }
 
 	private void Generate () { 
