@@ -32,7 +32,8 @@ public class MyTileGeneration : MonoBehaviour
     [SerializeField]
     private NoiseMapGeneration.Wave[] waves;
 
-    void Start()
+    //void Start()
+    void Update()
     {
         GenerateTile();
     }

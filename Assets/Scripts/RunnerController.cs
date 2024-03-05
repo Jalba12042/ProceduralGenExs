@@ -6,22 +6,47 @@ public class RunnerController : MonoBehaviour
 {
     [SerializeField]
     private GameObject thingPrefab;
-    Vector3 pos;
+    float theta;
+    public float thingRange;
+    public float spinRate;
+    Vector3 dPos;
+    public Vector3 pos, pos0;
 
+    public MyLevelGenInf myLevelGenInf;
+    public GameObject theTerrain;
 
+    public Vector3 Pos0
+    {
+        get { return pos0; }
+        set { pos0 = value; }
+    }
+    public Vector3 Pos
+    {
+        get { return pos; }
+        set { pos = value; }
+    }
     // Start is called before the first frame update
     void Start()
     {
-        //GameObject go = Instantiate(thingPrefab);
-        //go.transform.position = Vector3.one * 2.0f;
-        //Instantiate(thingPrefab, 1.0f * Vector3.one, Quaternion.identity);
-        pos = Vector3.up * 2.0f + Vector3.right * 2.0f + Vector3.forward *2.0f;
-        Instantiate(thingPrefab, pos, Quaternion.identity);
+        myLevelGenInf = theTerrain.GetComponent<MyLevelGenInf>();
+        pos0 = myLevelGenInf.TerrainCenter + Vector3.up * 3.0f;
+        thingPrefab = Instantiate(thingPrefab, pos0, Quaternion.identity);
+
+        pos = pos0;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        myLevelGenInf = theTerrain.GetComponent<MyLevelGenInf>();
+        pos0 = myLevelGenInf.TerrainCenter + (Vector3.up * 3.0f);
 
+        theta = spinRate * 2.0f * Mathf.PI * Time.time;
+        //dPos = Vector3.right * Mathf.Sin(theta) + Vector3.forward * Mathf.Cos(theta);
+        //pos = pos0 + thingRange * dPos.normalized;
+        dPos = 10 * Time.deltaTime * Vector3.back;
+        pos += dPos;
+        thingPrefab.transform.position = pos;
+        //Debug.Log(pos);
     }
 }

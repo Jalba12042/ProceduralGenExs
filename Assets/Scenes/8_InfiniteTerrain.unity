@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 65985436}
   - component: {fileID: 65985437}
+  - component: {fileID: 65985438}
   m_Layer: 0
   m_Name: terrain
   m_TagString: Untagged
@@ -167,9 +168,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745cbe4bbf8da0249b033e8dfb08e8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapWidthInTiles: 6
-  mapDepthInTiles: 6
+  mapWidthInTiles: 8
+  mapDepthInTiles: 8
   tilePrefab: {fileID: 2140855451552885640, guid: 01eecab973a60fe4f8e8d9f96a364f85, type: 3}
+  xTriggerMax: 0
+  xTriggerMin: 0
+  zTriggerMax: 0
+  zTriggerMin: 0
+  edgeTiles: 2
+  theRunner: {fileID: 1589077292}
+  runnerController: {fileID: 1589077293}
+--- !u!23 &65985438
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65985435}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &553566433
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1589077294}
   - component: {fileID: 1589077293}
+  - component: {fileID: 1589077295}
   m_Layer: 0
   m_Name: Runner
   m_TagString: Untagged
@@ -294,6 +345,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thingPrefab: {fileID: 103148394904165775, guid: 0f4bdf46c20b5f146b8d73936bbda72c, type: 3}
+  thingRange: 25
+  spinRate: 0.02
+  pos: {x: 0, y: 0, z: 0}
+  pos0: {x: 0, y: 0, z: 0}
+  myLevelGenInf: {fileID: 65985437}
+  theTerrain: {fileID: 65985435}
 --- !u!4 &1589077294
 Transform:
   m_ObjectHideFlags: 0
@@ -309,6 +366,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1589077295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589077292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb409cab9f7584d4084e0872c4e76d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1762836717
 GameObject:
   m_ObjectHideFlags: 0
