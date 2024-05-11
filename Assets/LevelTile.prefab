@@ -132,10 +132,10 @@ MonoBehaviour:
   terrainTypes:
   - name: water
     height: 0.4
-    color: {r: 0.13456745, g: 0.37481874, b: 0.7924528, a: 0}
+    color: {r: 0.5838733, g: 0.5981806, b: 0.6226415, a: 0}
   - name: grass
     height: 0.6
-    color: {r: 0.079476684, g: 0.4433962, b: 0.079476684, a: 0}
+    color: {r: 1, g: 1, b: 1, a: 0}
   - name: mountain
     height: 1
     color: {r: 0.38679248, g: 0.26637596, b: 0.26637596, a: 0}
