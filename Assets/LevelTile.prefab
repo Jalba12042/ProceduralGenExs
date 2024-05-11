@@ -175,11 +175,11 @@ MonoBehaviour:
     m_RotationOrder: 4
   waves:
   - seed: 5613
-    frequency: 1
+    frequency: 2
     amplitude: 1
   - seed: 5613
-    frequency: 0.5
+    frequency: 10.5
     amplitude: 2
   - seed: 5613
     frequency: 0.25
-    amplitude: 4
+    amplitude: 3
